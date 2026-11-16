@@ -1,0 +1,528 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Fio a Fio</title>
+<meta name="description" content="Guia de cuidados com o cabelo para mulheres: descubra seu tipo de fio, monte um cronograma capilar e monte a nécessaire certa.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: hero em painel arredondado com colagem de retratos, faixa rosa forte, blocos alternando fundo rosa claro e rosa médio, banner rosa forte antes das dúvidas. */
+:root {
+  --bg: #fddbe8;
+  --bg2: #ffc2da;
+  --surface: #ffeaf3;
+  --fg: #3a0f26;
+  --muted: #6e2f4d;
+  --accent: #b80b5c;
+  --hot: #e0117a;
+  --hot-fg: #ffffff;
+  --hot-soft: #ff9cc6;
+  --tint: #ffc9de;
+  --line: #f1a3c2;
+  --plum: #4a1030;
+  --font: "Avenir Next", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  --maxw: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #2b0a1b;
+    --bg2: #3d0f28;
+    --surface: #4a1431;
+    --fg: #ffe4ef;
+    --muted: #f2b5ce;
+    --accent: #ff7ab5;
+    --hot: #ff3d98;
+    --hot-fg: #2b0a1b;
+    --hot-soft: #a3205f;
+    --tint: #5a1a3b;
+    --line: #6b2147;
+    --plum: #ffd1e5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #2b0a1b;
+  --bg2: #3d0f28;
+  --surface: #4a1431;
+  --fg: #ffe4ef;
+  --muted: #f2b5ce;
+  --accent: #ff7ab5;
+  --hot: #ff3d98;
+  --hot-fg: #2b0a1b;
+  --hot-soft: #a3205f;
+  --tint: #5a1a3b;
+  --line: #6b2147;
+  --plum: #ffd1e5;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1.0625rem/1.65 var(--font);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: var(--maxw); margin-inline: auto; }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 6.2vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 800; }
+h3 { font-size: 1.2rem; font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+svg { display: block; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--hot); color: var(--hot-fg); padding: 10px 16px; border-radius: 8px; z-index: 20; }
+.skip:focus { left: 8px; }
+
+/* Cabeçalho */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 16px; }
+.brand { font-weight: 800; font-size: 1.3rem; letter-spacing: -0.02em; color: var(--fg); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; gap: 10px; }
+.brand span { color: var(--accent); }
+.brand svg { width: 28px; height: 28px; }
+.top nav { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.top nav a { color: var(--fg); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; font-size: 0.97rem; font-weight: 600; }
+.top nav a:hover { color: var(--accent); text-decoration: underline; }
+
+/* Botões */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; font: 700 1rem var(--font); text-decoration: none; border: 2px solid var(--hot); }
+.btn.primary { background: var(--hot); color: var(--hot-fg); }
+.btn.ghost { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn.light { background: var(--bg); color: var(--accent); border-color: var(--bg); }
+.btn:hover { filter: brightness(1.07); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 32px 40px; align-items: center; padding: 48px; border-radius: 32px; background: radial-gradient(circle at 85% 15%, var(--hot-soft) 0, transparent 45%), linear-gradient(135deg, var(--bg2), var(--bg)); }
+.eyebrow { display: inline-block; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hot-fg); background: var(--hot); padding: 6px 14px; border-radius: 999px; margin-bottom: 18px; }
+.hero p.lead { margin-top: 20px; font-size: 1.15rem; color: var(--muted); }
+.mark { background: linear-gradient(transparent 62%, var(--hot-soft) 62%); }
+.collage { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 400px; width: 100%; margin-inline: auto; padding-bottom: 24px; }
+.collage .frame:nth-child(even) { transform: translateY(24px); }
+.frame { aspect-ratio: 4 / 5; overflow: hidden; display: flex; align-items: flex-end; }
+.frame svg { width: 100%; height: 100%; }
+.f1 { background: linear-gradient(160deg, var(--hot), var(--hot-soft)); border-radius: 999px 999px 24px 24px; }
+.f2 { background: linear-gradient(160deg, var(--hot-soft), var(--bg2)); border-radius: 24px; }
+.f3 { background: linear-gradient(160deg, var(--bg2), var(--hot-soft)); border-radius: 24px; }
+.f4 { background: linear-gradient(160deg, var(--hot-soft), var(--hot)); border-radius: 999px 999px 24px 24px; }
+.spark { position: absolute; width: 34px; height: 34px; fill: var(--hot); }
+.spark.s1 { top: -6px; right: 4px; }
+.spark.s2 { bottom: 0; left: -4px; width: 24px; height: 24px; }
+.badge-float { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--surface); color: var(--accent); border: 2px solid var(--hot); font-weight: 800; font-size: 0.9rem; padding: 8px 16px; border-radius: 999px; white-space: nowrap; z-index: 2; }
+
+/* Faixa */
+.strip { margin-block: 20px; background: var(--hot); color: var(--hot-fg); border-radius: 999px; padding: 14px 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 28px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.9rem; }
+.strip span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: currentColor; margin-right: 10px; vertical-align: middle; }
+
+/* Blocos */
+.block { padding-block: 56px; }
+.band { background: var(--bg2); border-radius: 32px; padding: 48px; margin-block: 24px; }
+.sec-head { display: grid; gap: 12px; margin-bottom: 28px; }
+.sec-head p { color: var(--muted); }
+
+/* Tipos de cabelo */
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.tab { min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid var(--hot); background: transparent; color: var(--accent); font: 700 1rem var(--font); cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--hot); color: var(--hot-fg); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 28px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 24px 40px; }
+.panel .intro { display: grid; gap: 14px; align-content: start; }
+.panel ul { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+.panel li::marker { color: var(--hot); }
+.aside { display: grid; gap: 16px; align-content: start; }
+.aside .frame { max-width: 220px; width: 100%; margin-inline: auto; border-radius: 999px 999px 24px 24px; background: linear-gradient(160deg, var(--hot), var(--hot-soft)); }
+.freq { background: var(--tint); border-radius: 16px; padding: 18px 20px; display: grid; gap: 4px; }
+.freq .label { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+.freq .value { font-size: 1.4rem; font-weight: 800; color: var(--accent); line-height: 1.2; }
+.freq .note { font-size: 0.95rem; color: var(--muted); }
+
+/* Cronograma */
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+.card p { color: var(--muted); font-size: 1rem; }
+.card .tag { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.drop { width: 44px; height: 44px; border-radius: 50%; background: var(--hot); display: grid; place-items: center; }
+.drop svg { width: 22px; height: 22px; fill: var(--hot-fg); }
+.weeks { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.weeks li { background: var(--hot); color: var(--hot-fg); border-radius: 18px; padding: 16px 18px; display: grid; gap: 2px; }
+.weeks .w { font-size: 0.82rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.weeks .t { font-weight: 800; font-size: 1.15rem; }
+.caption { margin-top: 18px; color: var(--muted); font-size: 0.97rem; }
+
+/* Nécessaire */
+.shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.prod { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; display: grid; align-content: start; }
+.prod .stage { background: linear-gradient(180deg, var(--hot-soft), var(--bg2)); padding: 24px 0 0; display: flex; justify-content: center; align-items: flex-end; height: 190px; }
+.prod .stage svg { width: 96px; height: 150px; }
+.prod .body { padding: 18px 20px 22px; display: grid; gap: 6px; }
+.prod h3 { font-size: 1.1rem; }
+.prod p { color: var(--muted); font-size: 0.97rem; }
+
+/* Banner */
+.banner { background: var(--hot); color: var(--hot-fg); border-radius: 32px; padding: 56px 48px; display: grid; gap: 14px; justify-items: start; margin-block: 24px; }
+.banner h2 { max-width: 20ch; }
+.banner p { max-width: 55ch; font-size: 1.1rem; }
+
+/* Mitos e verdades */
+.faq { display: grid; gap: 10px; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+summary { min-height: 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding: 10px 20px; cursor: pointer; font-weight: 700; }
+summary .badge { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; background: var(--hot); color: var(--hot-fg); padding: 4px 12px; border-radius: 999px; }
+details p { padding: 0 20px 20px; color: var(--muted); }
+
+/* Hábitos */
+.habits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px 32px; margin: 0; padding: 0; list-style: none; }
+.habits li { display: grid; gap: 6px; align-content: start; }
+.habits li::before { content: ""; width: 44px; height: 8px; border-radius: 999px; background: var(--hot); margin-bottom: 6px; }
+.habits strong { font-size: 1.1rem; }
+.habits span { color: var(--muted); font-size: 1rem; }
+
+footer { background: var(--bg2); border-radius: 32px; padding: 32px 48px; color: var(--muted); font-size: 0.95rem; display: grid; gap: 8px; margin-top: 24px; }
+footer p { max-width: 70ch; }
+footer strong { color: var(--fg); }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding: 28px 22px 32px; border-radius: 24px; }
+  .band, .banner, footer { padding: 28px 22px; border-radius: 24px; }
+  .block { padding-block: 40px; }
+  .panel { grid-template-columns: minmax(0, 1fr); padding: 22px; }
+  .strip { border-radius: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="head">
+      <rect x="88" y="138" width="24" height="46" rx="10" style="fill:var(--skin)"/>
+      <ellipse cx="100" cy="106" rx="40" ry="48" style="fill:var(--skin)"/>
+      <ellipse cx="85" cy="108" rx="3.2" ry="4.4" fill="#3a0f26"/>
+      <ellipse cx="115" cy="108" rx="3.2" ry="4.4" fill="#3a0f26"/>
+      <path d="M89 126Q100 136 111 126" fill="none" stroke="#3a0f26" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="76" cy="120" r="6" fill="#ff5c9a" opacity="0.35"/>
+      <circle cx="124" cy="120" r="6" fill="#ff5c9a" opacity="0.35"/>
+    </g>
+    <symbol id="p-liso" viewBox="0 0 200 240">
+      <path d="M20 240C20 192 60 176 100 176S180 192 180 240Z" style="fill:var(--cloth)"/>
+      <path d="M52 100C46 40 154 40 148 100L158 232H122V158H78V232H42Z" style="fill:var(--hair)"/>
+      <use href="#head"/>
+      <path d="M58 104C56 56 144 52 142 104C130 82 108 76 92 66C86 82 72 94 58 104Z" style="fill:var(--hair)"/>
+    </symbol>
+    <symbol id="p-ondulado" viewBox="0 0 200 240">
+      <path d="M20 240C20 192 60 176 100 176S180 192 180 240Z" style="fill:var(--cloth)"/>
+      <path d="M50 100C40 40 160 40 150 100C166 132 140 150 156 186C162 210 140 222 130 208C124 196 120 176 122 160H78C80 176 76 196 70 208C60 222 38 210 44 186C60 150 34 132 50 100Z" style="fill:var(--hair)"/>
+      <use href="#head"/>
+      <path d="M58 104C54 58 146 54 142 104C132 88 120 80 100 70C84 82 70 96 58 104Z" style="fill:var(--hair)"/>
+    </symbol>
+    <symbol id="p-cacheado" viewBox="0 0 200 240">
+      <path d="M20 240C20 192 60 176 100 176S180 192 180 240Z" style="fill:var(--cloth)"/>
+      <g style="fill:var(--hair)">
+        <circle cx="100" cy="46" r="24"/><circle cx="68" cy="58" r="24"/><circle cx="132" cy="58" r="24"/>
+        <circle cx="50" cy="90" r="24"/><circle cx="150" cy="90" r="24"/>
+        <circle cx="46" cy="126" r="22"/><circle cx="154" cy="126" r="22"/>
+        <circle cx="48" cy="160" r="22"/><circle cx="152" cy="160" r="22"/>
+        <circle cx="54" cy="190" r="18"/><circle cx="146" cy="190" r="18"/>
+      </g>
+      <use href="#head"/>
+      <g style="fill:var(--hair)"><circle cx="80" cy="72" r="15"/><circle cx="102" cy="66" r="16"/><circle cx="124" cy="74" r="14"/></g>
+    </symbol>
+    <symbol id="p-crespo" viewBox="0 0 200 240">
+      <path d="M20 240C20 192 60 176 100 176S180 192 180 240Z" style="fill:var(--cloth)"/>
+      <circle cx="100" cy="92" r="72" style="fill:var(--hair)"/>
+      <use href="#head"/>
+      <path d="M60 98C62 64 138 64 140 98C126 82 74 82 60 98Z" style="fill:var(--hair)"/>
+    </symbol>
+    <symbol id="b-shampoo" viewBox="0 0 100 160">
+      <rect x="38" y="22" width="24" height="26" rx="6" style="fill:var(--b2)"/>
+      <rect x="24" y="44" width="52" height="104" rx="16" style="fill:var(--b1)"/>
+      <rect x="32" y="80" width="36" height="40" rx="8" style="fill:var(--label)"/>
+    </symbol>
+    <symbol id="b-cond" viewBox="0 0 100 160">
+      <path d="M28 30H72L78 144C78 150 74 154 68 154H32C26 154 22 150 22 144Z" style="fill:var(--b1)"/>
+      <rect x="26" y="18" width="48" height="16" rx="5" style="fill:var(--b2)"/>
+      <rect x="32" y="76" width="36" height="40" rx="8" style="fill:var(--label)"/>
+    </symbol>
+    <symbol id="b-mask" viewBox="0 0 100 160">
+      <rect x="10" y="84" width="80" height="64" rx="14" style="fill:var(--b1)"/>
+      <rect x="6" y="66" width="88" height="26" rx="9" style="fill:var(--b2)"/>
+      <rect x="22" y="100" width="56" height="32" rx="8" style="fill:var(--label)"/>
+    </symbol>
+    <symbol id="b-spray" viewBox="0 0 100 160">
+      <rect x="34" y="30" width="38" height="14" rx="4" style="fill:var(--b2)"/>
+      <rect x="44" y="42" width="12" height="20" style="fill:var(--b2)"/>
+      <rect x="28" y="60" width="44" height="88" rx="12" style="fill:var(--b1)"/>
+      <rect x="34" y="88" width="32" height="38" rx="8" style="fill:var(--label)"/>
+      <circle cx="18" cy="34" r="3" style="fill:var(--b1)"/><circle cx="10" cy="40" r="2.5" style="fill:var(--b1)"/><circle cx="18" cy="46" r="2" style="fill:var(--b1)"/>
+    </symbol>
+    <symbol id="b-oil" viewBox="0 0 100 160">
+      <ellipse cx="50" cy="38" rx="11" ry="20" style="fill:var(--b2)"/>
+      <rect x="40" y="54" width="20" height="18" style="fill:var(--b2)"/>
+      <rect x="26" y="68" width="48" height="80" rx="18" style="fill:var(--b1)"/>
+      <rect x="34" y="94" width="32" height="34" rx="8" style="fill:var(--label)"/>
+    </symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#inicio">
+      <svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="14" style="fill:var(--hot)"/><path d="M9 6C14 10 6 14 12 18S13 23 13 23M14 5C19 10 11 14 17 18S18 23 18 23" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.95"/></svg>
+      <span style="color:var(--fg)">Fio <span>a</span> Fio</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#rotina">Seu tipo de cabelo</a>
+      <a href="#cronograma">Cronograma capilar</a>
+      <a href="#necessaire">Nécessaire</a>
+      <a href="#mitos">Mitos e verdades</a>
+    </nav>
+  </header>
+
+  <main id="principal">
+    <div class="hero" id="inicio">
+      <div>
+        <span class="eyebrow">Guia de cuidados capilares</span>
+        <h1>Cuidar do cabelo do jeito que o <span class="mark">seu fio</span> pede</h1>
+        <p class="lead">Descubra a rotina certa para o seu tipo de cabelo, monte um cronograma capilar simples e aprenda a escolher o que entra na sua nécessaire.</p>
+        <div class="actions">
+          <a class="btn primary" href="#rotina">Descobrir minha rotina</a>
+          <a class="btn ghost" href="#cronograma">Ver o cronograma</a>
+        </div>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <svg class="spark s1" viewBox="0 0 24 24"><use href="#star"/></svg>
+        <svg class="spark s2" viewBox="0 0 24 24"><use href="#star"/></svg>
+        <div class="frame f1"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-liso" style="--skin:#f2c4a8;--hair:#4a1f2d;--cloth:#e0117a"/></svg></div>
+        <div class="frame f2"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-ondulado" style="--skin:#d9a07a;--hair:#3d2318;--cloth:#b80b5c"/></svg></div>
+        <div class="frame f3"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-cacheado" style="--skin:#a86a45;--hair:#2b1720;--cloth:#ff7ab5"/></svg></div>
+        <div class="frame f4"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-crespo" style="--skin:#7a4a2f;--hair:#1f1218;--cloth:#ffa6cc"/></svg></div>
+        <span class="badge-float">Todos os tipos de fio</span>
+      </div>
+    </div>
+
+    <div class="strip" aria-label="Temas do site">
+      <span>Hidratação</span><span>Nutrição</span><span>Reconstrução</span><span>Anti-frizz</span><span>Brilho</span>
+    </div>
+
+    <section class="block" id="rotina" aria-labelledby="t-rotina">
+      <div class="sec-head">
+        <h2 id="t-rotina">Qual é o seu tipo de cabelo?</h2>
+        <p>Escolha o seu e veja dicas de lavagem, finalização e a frequência que costuma funcionar.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Tipo de cabelo">
+        <button class="tab" role="tab" id="tab-liso" aria-controls="p-liso-painel" aria-selected="true" tabindex="0" type="button">Liso</button>
+        <button class="tab" role="tab" id="tab-ondulado" aria-controls="p-ondulado-painel" aria-selected="false" tabindex="-1" type="button">Ondulado</button>
+        <button class="tab" role="tab" id="tab-cacheado" aria-controls="p-cacheado-painel" aria-selected="false" tabindex="-1" type="button">Cacheado</button>
+        <button class="tab" role="tab" id="tab-crespo" aria-controls="p-crespo-painel" aria-selected="false" tabindex="-1" type="button">Crespo</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-liso-painel" aria-labelledby="tab-liso">
+        <div class="intro">
+          <h3>Cabelo liso</h3>
+          <p>A raiz costuma engordurar primeiro, enquanto as pontas ressecam. O segredo é equilibrar os dois.</p>
+          <ul>
+            <li>Lave a raiz com shampoo e deixe a espuma escorrer pelos fios, sem esfregar os comprimentos.</li>
+            <li>Passe o condicionador só do meio às pontas.</li>
+            <li>Use pouco produto: excesso pesa e tira o movimento do fio.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="frame" aria-hidden="true"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-liso" style="--skin:#f2c4a8;--hair:#4a1f2d;--cloth:#e0117a"/></svg></div>
+          <div class="freq"><span class="label">Lavagem</span><span class="value">2 a 4 vezes por semana</span><span class="note">Ajuste conforme a oleosidade da raiz.</span></div>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-ondulado-painel" aria-labelledby="tab-ondulado" hidden>
+        <div class="intro">
+          <h3>Cabelo ondulado</h3>
+          <p>As ondas ficam entre o liso e o cacheado. Pedem hidratação regular e produtos leves para manter a definição.</p>
+          <ul>
+            <li>Aplique leave-in leve com o cabelo ainda molhado para controlar o frizz.</li>
+            <li>Tire o excesso de água apertando os fios com uma camiseta de algodão ou toalha de microfibra.</li>
+            <li>Desembarace com condicionador, nunca com o cabelo seco.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="frame" aria-hidden="true"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-ondulado" style="--skin:#d9a07a;--hair:#3d2318;--cloth:#b80b5c"/></svg></div>
+          <div class="freq"><span class="label">Lavagem</span><span class="value">2 a 3 vezes por semana</span><span class="note">Fios mais secos pedem intervalos maiores.</span></div>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-cacheado-painel" aria-labelledby="tab-cacheado" hidden>
+        <div class="intro">
+          <h3>Cabelo cacheado</h3>
+          <p>A oleosidade natural do couro cabeludo demora a descer pelos cachos, por isso eles ressecam com mais facilidade.</p>
+          <ul>
+            <li>Desembarace com condicionador e pente de dentes largos, das pontas para a raiz.</li>
+            <li>Finalize com o cabelo molhado, aplicando o creme por mechas.</li>
+            <li>Evite mexer nos cachos enquanto secam para reduzir o frizz.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="frame" aria-hidden="true"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-cacheado" style="--skin:#a86a45;--hair:#2b1720;--cloth:#ff7ab5"/></svg></div>
+          <div class="freq"><span class="label">Lavagem</span><span class="value">1 a 3 vezes por semana</span><span class="note">Priorize hidratação e nutrição.</span></div>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-crespo-painel" aria-labelledby="tab-crespo" hidden>
+        <div class="intro">
+          <h3>Cabelo crespo</h3>
+          <p>Os fios crespos são naturalmente mais secos e frágeis nas curvas. O cuidado gira em torno de reter água e evitar quebra.</p>
+          <ul>
+            <li>Divida o cabelo em seções para lavar, condicionar e desembaraçar com calma.</li>
+            <li>Prefira penteados protetores e evite puxar demais a raiz.</li>
+            <li>Use protetor térmico sempre que usar secador ou chapinha, em temperatura baixa ou média.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="frame" aria-hidden="true"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet"><use href="#p-crespo" style="--skin:#7a4a2f;--hair:#1f1218;--cloth:#ffa6cc"/></svg></div>
+          <div class="freq"><span class="label">Lavagem</span><span class="value">cerca de 1 vez por semana</span><span class="note">Observe o couro cabeludo e ajuste.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="cronograma" aria-labelledby="t-cron">
+      <div class="sec-head">
+        <h2 id="t-cron">Cronograma capilar</h2>
+        <p>Alternar três tratamentos ao longo do mês repõe o que o fio perde no dia a dia: água, gordura e proteína.</p>
+      </div>
+      <div class="three">
+        <article class="card">
+          <div class="drop" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2z"/></svg></div>
+          <span class="tag">Repõe água</span>
+          <h3>Hidratação</h3>
+          <p>Máscaras com umectantes, como glicerina e pantenol, devolvem maciez e flexibilidade ao fio.</p>
+        </article>
+        <article class="card">
+          <div class="drop" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13zm0 17a4 4 0 01-4-4c0-1 .6-2.600 2-4.600 1.200 1 3 2.800 3 4.600A4 4 0 0112 19z"/></svg></div>
+          <span class="tag">Repõe gordura</span>
+          <h3>Nutrição</h3>
+          <p>Óleos e manteigas vegetais, como karité, selam a cutícula e diminuem o ressecamento das pontas.</p>
+        </article>
+        <article class="card">
+          <div class="drop" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1l9 4v6c0 5-4 10-9 12-5-2-9-7-9-12V5z"/></svg></div>
+          <span class="tag">Repõe proteína</span>
+          <h3>Reconstrução</h3>
+          <p>Produtos com aminoácidos ou queratina hidrolisada ajudam fios com química, calor ou quebra.</p>
+        </article>
+      </div>
+      <ol class="weeks" aria-label="Exemplo de mês">
+        <li><span class="w">Semana 1</span><span class="t">Hidratação</span></li>
+        <li><span class="w">Semana 2</span><span class="t">Nutrição</span></li>
+        <li><span class="w">Semana 3</span><span class="t">Hidratação</span></li>
+        <li><span class="w">Semana 4</span><span class="t">Reconstrução</span></li>
+      </ol>
+      <p class="caption">Reconstrução em excesso deixa o cabelo rígido e quebradiço. Se o fio não tem química nem muito calor, troque a semana 4 por nutrição.</p>
+    </section>
+
+    <section class="block" id="necessaire" aria-labelledby="t-nec">
+      <div class="sec-head">
+        <h2 id="t-nec">Sua nécessaire capilar</h2>
+        <p>Cinco produtos cobrem a rotina da maioria dos cabelos. Escolha as versões pensadas para o seu tipo de fio.</p>
+      </div>
+      <div class="shelf">
+        <article class="prod">
+          <div class="stage" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#b-shampoo" style="--b1:#e0117a;--b2:#4a1030;--label:#ffeaf3"/></svg></div>
+          <div class="body"><h3>Shampoo</h3><p>Limpa o couro cabeludo. Prefira fórmulas suaves e use só o necessário.</p></div>
+        </article>
+        <article class="prod">
+          <div class="stage" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#b-cond" style="--b1:#ff5aa5;--b2:#4a1030;--label:#ffeaf3"/></svg></div>
+          <div class="body"><h3>Condicionador</h3><p>Fecha a cutícula e facilita o desembaraço. Aplique do meio às pontas.</p></div>
+        </article>
+        <article class="prod">
+          <div class="stage" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#b-mask" style="--b1:#b80b5c;--b2:#4a1030;--label:#ffeaf3"/></svg></div>
+          <div class="body"><h3>Máscara</h3><p>O tratamento do cronograma. Deixe agir pelo tempo indicado na embalagem.</p></div>
+        </article>
+        <article class="prod">
+          <div class="stage" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#b-spray" style="--b1:#ff7ab5;--b2:#4a1030;--label:#ffeaf3"/></svg></div>
+          <div class="body"><h3>Leave-in</h3><p>Sem enxágue. Controla o frizz e protege o fio no dia a dia.</p></div>
+        </article>
+        <article class="prod">
+          <div class="stage" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#b-oil" style="--b1:#e0117a;--b2:#4a1030;--label:#ffeaf3"/></svg></div>
+          <div class="body"><h3>Óleo</h3><p>Para finalizar. Poucas gotas nas pontas dão brilho e selam a umidade.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="banner">
+      <h2>Seu cabelo merece uma rotina feita para ele</h2>
+      <p>Comece pelo tipo de fio, siga o cronograma por um mês e observe o que muda. Ajustes pequenos fazem diferença.</p>
+      <a class="btn light" href="#rotina">Escolher meu tipo de cabelo</a>
+    </div>
+
+    <section class="band" id="mitos" aria-labelledby="t-mitos">
+      <div class="sec-head">
+        <h2 id="t-mitos">Mitos e verdades</h2>
+        <p>Toque na pergunta para ver a resposta.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><span class="badge">Mito</span> Cortar as pontas faz o cabelo crescer mais rápido</summary>
+          <p>O crescimento acontece na raiz, em média cerca de 1 cm por mês. O corte tira as pontas ressecadas e evita que a quebra roube comprimento.</p>
+        </details>
+        <details>
+          <summary><span class="badge">Depende</span> Lavar o cabelo todo dia estraga</summary>
+          <p>Com shampoo suave e condicionador só nos comprimentos, quem tem raiz oleosa pode lavar com frequência. Fios muito secos costumam pedir intervalos maiores.</p>
+        </details>
+        <details>
+          <summary><span class="badge">Verdade</span> Água muito quente prejudica o cabelo</summary>
+          <p>Água quente resseca fios e couro cabeludo. Prefira água morna na lavagem e termine o enxágue com água mais fria.</p>
+        </details>
+        <details>
+          <summary><span class="badge">Mito</span> Escovar 100 vezes por dia deixa o cabelo brilhante</summary>
+          <p>Escovar demais gera atrito e quebra. Escove com delicadeza, e só quando precisar desembaraçar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="block" id="habitos" aria-labelledby="t-hab">
+      <div class="sec-head">
+        <h2 id="t-hab">Hábitos que fazem diferença</h2>
+      </div>
+      <ul class="habits">
+        <li><strong>Protetor térmico</strong><span>Antes de secador, chapinha ou babyliss, sempre.</span></li>
+        <li><strong>Fronha de cetim</strong><span>Reduz o atrito durante a noite e o frizz de manhã.</span></li>
+        <li><strong>Toalha de microfibra</strong><span>Seca sem esfregar e agride menos a cutícula.</span></li>
+        <li><strong>Aparar a cada 2 a 3 meses</strong><span>Mantém as pontas saudáveis e o comprimento.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Fio a Fio</strong></p>
+    <p>Conteúdo informativo. Em caso de queda intensa, coceira persistente, feridas ou descamação no couro cabeludo, procure um dermatologista.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i); });
+    t.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') n = 0;
+      else if (e.key === 'End') n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); select(n, true); }
+    });
+  });
+})();
+</script>
+
+</body></html>
